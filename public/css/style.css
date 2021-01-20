@@ -9,6 +9,12 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.container {
+    width: min(90vw, 800px);
+
+    margin: auto;
+}
+
 header {
     background: #2d4a22;
     padding: 2rem 0 10rem;
