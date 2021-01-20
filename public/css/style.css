@@ -15,6 +15,14 @@ body {
     margin: auto;
 }
 
+h2 {
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+    color: #363f5f;
+
+    font-weight: normal;
+}
+
 header {
     background: #2d4a22;
     padding: 2rem 0 10rem;
