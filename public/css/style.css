@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 93.75%; /* 15px */
+}
+
 body {
     background: #f0f2f5;
     font-family: 'Poppins', sans-serif;
@@ -113,10 +117,14 @@ header {
 
 #data-table {
     width: 100%;
+
+    display: block;
     
     border-spacing: 0 0.5rem;
 
     color: #969CB3;
+
+    overflow-x: auto;
 }
 
 /* ------Tables------ */
