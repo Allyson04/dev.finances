@@ -70,6 +70,64 @@ header {
     background:  #49aa26;
     color: white;
 }
+
+#data-table {
+    width: 100%;
+    
+    border-spacing: 0 0.5rem;
+
+    color: #969CB3;
+}
+
+table tbody tr {
+    opacity: 0.6;
+}
+
+table tbody tr:hover {
+    opacity: 1;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+}
+
+table th {
+    background: white;
+
+    padding: 1rem 2rem;
+
+    font-weight: normal;
+    text-align: left;
+}
+
+table td {
+    background: white;
+
+    padding: 1rem 2rem;
+}  
+
+table td.description {
+    color: #363f5f;
+}
+
+table td.income {
+    color: #12a454;
+}
+
+table td.expense {
+    color: #e92929;
+}
+
+table tbody td:first-child,
+table thead th:first-child {
+    border-radius: 0.25em 0 0 0.25rem;
+    -webkit-border-radius: 0.25em 0 0 0.25rem;
+    -moz-border-radius: 0.25em 0 0 0.25rem;
+    -ms-border-radius: 0.25em 0 0 0.25rem;
+    -o-border-radius: 0.25em 0 0 0.25rem;
+}
+
 footer {
     text-align: center;
 }
