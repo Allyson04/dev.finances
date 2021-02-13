@@ -32,3 +32,15 @@ const transactions = [
         date: "06/02/2001"
     }
 ]
+const Transaction = {
+    incomes() {
+        //sum of all incomes
+    },
+    expenses() {
+        //sum of all expenses
+    },
+    total() {
+        //all incomes less all expenses
+    }
+
+}
