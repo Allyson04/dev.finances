@@ -70,3 +70,7 @@ const DOM = {
         return html
     }
 }
+
+transactions.forEach(function(transaction)) {
+    DOM.addTransaction(transaction)
+}
