@@ -12,7 +12,7 @@ Modal = {
     }
 }
 
-const transactions = [
+const transaction = [
     {
         id: 1,
         description: "Luz",
@@ -28,7 +28,7 @@ const transactions = [
     {
         id: 3,
         description: "Internet",
-        amount: 50000,
+        amount: -50000,
         date: "06/02/2001"
     }
 ]
