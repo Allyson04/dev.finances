@@ -72,6 +72,12 @@ const DOM = {
         `
 
         return html
+    },
+
+    updateBalance() {
+        document.getElementById("incomeDisplay").innerHTML = Utils.formatCurrency(Transaction.incomes())
+        document.getElementById("expenseDisplay").innerHTML = Utils.formatCurrency(Transaction.expenses())
+        document.getElementById("totalDisplay").innerHTML = Utils.formatCurrency(Transaction.total())
     }
 }
 
