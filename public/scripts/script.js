@@ -34,13 +34,41 @@ const transaction = [
 ]
 const Transaction = {
     incomes() {
-        //sum of all incomes
+
+        let income = 0;
+        //catch all transactions
+        transaction.forEach(transaction => {
+            if (transaction.amount > 0) {
+            // use only transactions higher than zero
+                income += transaction.amount
+            }
+
+        })
+
+        // return value
+        return income
     },
     expenses() {
+        let expense = 0;
+
+        transaction.forEach(transaction => {
+
+            if (transaction.amount < 0) {
+                expense += transaction.amount
+            }
+        })
+
+        return expense
         //sum of all expenses
     },
     total() {
+
+        let total = Transaction.incomes() + Transaction.expenses();
+        console.log(transaction.amount)
+
         //all incomes less all expenses
+
+        return total
     }
 
 }
