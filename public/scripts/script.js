@@ -137,3 +137,6 @@ const Utils = {
 transaction.forEach(function(transaction) {
     DOM.addTransaction(transaction)
 })
+
+//first we get the "DOM" array, the activate function "updateBalance"
+DOM.updateBalance()
