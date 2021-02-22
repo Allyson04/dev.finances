@@ -12,7 +12,7 @@ Modal = {
     }
 }
 
-const transaction = [
+const transactions = [
     {
         id: 1,
         description: "Luz",
@@ -33,11 +33,18 @@ const transaction = [
     }
 ]
 const Transaction = {
-    incomes() {
+    all: transactions,
 
+    add(transaction){
+        Transaction.all.push(transaction)
+
+        console.log(Transaction.all)
+    },
+
+    incomes() {
         let income = 0;
         //catch all transactions
-        transaction.forEach(transaction => {
+        Transaction.all.forEach(transaction => {
             if (transaction.amount > 0) {
             // use only transactions higher than zero
                 income += transaction.amount
@@ -48,10 +55,11 @@ const Transaction = {
         // return value
         return income
     },
+
     expenses() {
         let expense = 0;
 
-        transaction.forEach(transaction => {
+        Transaction.all.forEach(transaction => {
 
             if (transaction.amount < 0) {
                 expense += transaction.amount
@@ -63,12 +71,9 @@ const Transaction = {
     },
     total() {
 
-        let total = Transaction.incomes() + Transaction.expenses();
-        console.log(transaction.amount)
-
         //all incomes less all expenses
-
-        return total
+        return Transaction.incomes() + Transaction.expenses();
+        
     }
 
 }
@@ -133,10 +138,18 @@ const Utils = {
     }
 }
 
+Transaction.add({
+    id: 39,
+    description: 'alo',
+    amount: 200,
+    date: '23/01/2001'
+})
+
 //First you indicate the array of objects 'transactions', and forEach object, you do a anonymous function sending each object as data 'transaction' for functions, and then call what is inside DOM and addTransaction with 'transaction' as parameter previously
-transaction.forEach(function(transaction) {
+transactions.forEach(function(transaction) {
     DOM.addTransaction(transaction)
 })
 
 //first we get the "DOM" array, the activate function "updateBalance"
 DOM.updateBalance()
+
